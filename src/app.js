@@ -6,8 +6,7 @@ app.use(
   cors({
     origin: "https://frontend-banking-eta.vercel.app",
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+   
   })
 );
 app.use(express.json());
