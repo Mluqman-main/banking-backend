@@ -1,0 +1,26 @@
+const express = require('express');
+const app = express();
+const dns = require('dns');
+const cors = require('cors');
+app.use(
+  cors({
+    origin: "*",
+    credentials: true,
+  })
+);
+app.use(express.json());
+dns.setServers(['8.8.8.8', '8.8.4.4']);
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
+const dotenv = require('dotenv');
+dotenv.config();
+const connectDB = require('./db/db');
+connectDB();
+const router = require('./routes/user.route');
+const routerTran = require('./routes/transication.route');
+
+app.use('/api/auth', router);
+app.use('/api/transaction', routerTran);
+
+
+module.exports = app
