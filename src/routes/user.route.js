@@ -28,9 +28,9 @@ const { createLoan } = require('../controllers/user.controller');
  // /api/auth/logout - Logout
  router.post('/logout', verifyToken, logout);
  // /api/auth/resetPassword - Reset password
- router.post('/resetPassword', verifyToken, PasswordReset);
+ router.post('/resetPassword',  PasswordReset);
  // /api/auth/updatePassword - Update password
- router.post('/updatePassword', verifyToken, updatePassword);
+ router.post('/updatePassword', updatePassword);
 // /api/auth/getTransferLimit - Get transfer limit
  router.get('/getTransferLimit', verifyToken, getTransferLimit);
  // /api/auth/requestLimitIncrease - Request limit increase
