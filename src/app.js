@@ -4,7 +4,7 @@ const dns = require('dns');
 const cors = require('cors');
 app.use(
   cors({
-    origin: "https://frontend-banking-57jhjboqr-mluqman-mains-projects.vercel.app",
+    origin: "https://frontend-banking-eta.vercel.app/",
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
